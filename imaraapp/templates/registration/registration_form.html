@@ -1,0 +1,48 @@
+{%extends "registration/regbase.html"%} {% load bootstrap4 %}
+{% load crispy_forms_tags %}
+
+{% block content %}
+<br>
+<br>
+<br>
+
+<div class="container">
+  <div class="row">
+    <!-- Empty div -->
+    <div class="col-md-4"></div>
+    <div class="col-md-4">
+      {% if form.errors %}
+      <p> Some Information Might be Incorrect </p>
+      {% endif %}
+      <div class="panel panel-default shadow-lg p-3 mb-5 bg-white rounded">
+
+        <div class="panel-heading">
+          <h3 class="text-center">Sponsor Sign Up</h3>
+        </div>
+        <div class="panel-body">
+
+          <form method="post" action="{% url 'sponsorsignup' %}" enctype="multipart/form-data">
+            {% csrf_token %}
+            {{form|crispy }}
+            <div class="form-group">
+              <input type="submit" class="btn btn-primary btn-sm" value="Sign Up">
+            </div>
+
+            <input type="hidden" name="next" value="/accounts/login/">
+
+            
+          </form>
+          <br>
+
+        </div>
+
+      </div>
+
+
+    </div>
+    <br><br>
+  </body>
+</html>
+
+
+{%endblock%}

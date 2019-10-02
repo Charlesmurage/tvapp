@@ -1,0 +1,100 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Imara Tv</title>
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
+  <link rel="stylesheet" href="static/css/index.css">
+  <link rel="stylesheet" href="static/css/bulma.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.5/css/bulma.min.css">
+  <!-- Bootstrap core CSS -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Material Design Bootstrap -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.8.2/css/mdb.min.css" rel="stylesheet">
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <!-- Bootstrap tooltips -->
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.4/umd/popper.min.js">
+  </script>
+  <!-- Bootstrap core JavaScript -->
+  <script type="text/javascript"
+    src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script>
+  <!-- MDB core JavaScript -->
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.8.2/js/mdb.min.js"></script>
+</head>
+
+<body>
+  <!--Navbar-->
+
+
+  <nav class="navbar fixed-top navbar-expand-lg navbar-light white scrolling-navbar">
+    <div class="container">
+
+      <!-- Brand -->
+      <a class="navbar-brand waves-effect" href="" target="_self">
+        <img src="" class="rounded-circle" width="">
+        <strong class="black-text title">Imara tv</strong>
+      </a>
+
+      <!-- Collapse -->
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <!-- Links -->
+      <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
+
+        <!-- Right -->
+        <ul class="navbar-nav nav-flex-icons">
+          <li class="nav-item justify-content end">
+            <a href="/login/" class="nav-link waves-effect" target="/accounts/login/">Be a Sponsor</a>
+
+          </li>
+          <li class="nav-item justify-content end">
+            <a href="/creatorlogin  /" class="nav-link waves-effect" target="_blank">Be a Creator</a>
+          </li>
+
+        </ul>
+
+
+      </div>
+
+    </div>
+  </nav>
+
+
+
+  <header>
+    <!--Carousel Wrapper-->
+
+    <div class="overlay">
+      <div class="intro text-center">
+        <h1 class="bg-heading">
+          <p>Explore amazing content creators</p>
+          <p>with world-class skills</p>
+        </h1>
+        <h2 class="sm-heading">
+          <p>Imara.tv believes in innovative minds</p>
+        </h2>
+
+        <a href="/login/"><button class="btn btn-outline-default" type="button" name="button">Be a
+            Sponsor</button></a>
+        <a href="/creatorlogin  /"><button class="btn btn-outline-default" type="button" name="button">Be a
+            Creator</button></a>
+       <a href="{% url 'creator-content' %}"><button class="btn btn-outline-default" type="button" name="button">Watch Video
+            </button></a>    
+
+      </div>
+    </div> 
+    
+  </header>
+ 
+
+
+
+
+</body>

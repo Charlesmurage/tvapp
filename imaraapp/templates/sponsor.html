@@ -1,0 +1,90 @@
+{% extends 'base_one.html' %}
+{% load bootstrap4 %}
+
+{% block content %}
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+
+<div class="columns is-variable is-0">
+    <div>
+        <div class="menu-container px-1 has-background-white">
+            <div class="menu-wrapper py-1">
+                <aside class="menu">
+                    <p class="menu-label has-text-lighter">General</p>
+                    {{user.username}}
+                    <ul class="menu-list">
+                        <li>
+                            <a href="#" class=" is-active has-background-primary">
+                                <i class="fas fa-tachometer-alt icon"></i>
+                                Dashboard</a>
+
+                        </li>
+                    </ul>
+                    <p class="menu-label has-text-lighter">General</p>
+                    <ul class="menu-list">
+                        <li>
+                            <a href="{% url 'sponsor_reports' %}" class="">
+                                <i class="fas fa-chart-line icon"></i>
+                                Audience/View Reports</a>
+                        </li>
+
+                        <li>
+                            <a href="{% url 'resource' %}" class="">
+                                <i class="fas fa-file-upload icon"></i>
+                                Upload Resources</a>
+                        </li>
+
+                    </ul>
+
+                </aside>
+            </div>
+        </div>
+    </div>
+
+
+</div>
+
+<div class="container-fluid">
+    <div class="row" id=cards>
+
+        {% for category in categories %}
+        <div class="col-md-6">
+            <div class="card shadow-lg p-3 mb-5 bg-white rounded" style="height:20rem; width:20rem;">
+                <img class="card-img-top"
+                    src="https://cdn.pixabay.com/photo/2018/01/24/18/05/background-3104413_960_720.jpg"
+                    class="card-img-top" alt="Card image cap">
+                <div class="card-body">
+                    <a style="color: yellowgreen;" href="{% url 'display-scripts' category.id %}">{{category.name}}</a>
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+
+
+
+
+
+
+
+
+    </div>
+
+</div>
+
+<!-- Card -->
+
+<!-- Card -->
+
+
+</body>
+
+
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+<script type="text/javascript"
+    src="https://cdnjs.cloudflare.com/ajax/libs/jquery.nicescroll/3.7.6/jquery.nicescroll.min.js"></script>
+
+</html>
+
+
+{% endblock %}

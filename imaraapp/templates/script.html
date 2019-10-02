@@ -1,0 +1,35 @@
+{%extends 'registration/regbase.html'%}
+{%load bootstrap4%}
+
+{{block.super}}
+<br>
+<br>
+{%block content%}
+<br>
+<br>
+<br>
+<br>
+<div class="container">
+  <div class="row">
+    <div class="col-md-3"></div>
+    <div class="col-md-6">
+      <div class="loggi">
+        <h2>Customize you script</h2>
+        <form class="form-group" action="{%url 'script' user.id%}" method="POST" enctype="multipart/form-data">
+          {%csrf_token%}
+          {%bootstrap_form form%}
+          <button class="btn btn-default" type="submit" name="button">Upload Script</button>
+          <br> <br>
+        </form>
+      </div>
+
+    </div>
+    <div class="col-md-3"></div>
+
+  </div>
+
+
+</div>
+
+
+{%endblock%}

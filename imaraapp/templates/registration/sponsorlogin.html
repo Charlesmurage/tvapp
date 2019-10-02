@@ -1,0 +1,50 @@
+{%extends 'registration/regbase.html'%}
+{%load bootstrap4%}
+{% load crispy_forms_tags%}
+
+{{block.super}}
+{%block content%}
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title></title>
+</head>
+
+<body id="logg">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-3"></div>
+      <div class="col-md-6">
+        <div class="loggin">
+          <h2 style="color: #2bbbad">Login</h2>
+
+          <form style="color: #2bbbad " class=" form-group" action="/sponsorlogin/" method="POST">
+            {%csrf_token%}
+            {{form|crispy}}
+
+
+
+            <button class="btn-btn-default" type="submit" name="button">Login</button>
+            <br> <br>
+            <a href="/sponsorsignup">
+              <p style="color:  #2bbbad ">Dont have an account ? Register here</p>
+            </a>
+
+          </form>
+        </div>
+
+      </div>
+      <div class="col-md-3"></div>
+
+    </div>
+
+
+  </div>
+</body>
+
+</html>
+
+
+{%endblock%}

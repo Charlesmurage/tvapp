@@ -1,0 +1,35 @@
+{%extends 'registration/regbase.html'%}
+{%load bootstrap4%}
+{{block.super}}
+{%block content%}
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-4 sidePro bg-dark">
+            {%if profile%}
+            {%for i in profile%}
+            <div class="improfile">
+                <div class="over">
+                    <img height="120" class="rounded-circle hoverable " src="{{i.profile.url}}" alt="">
+                    <span id="user">{{user.username}}</span>
+                    <p>Status {{i.bio}}</p>
+                </div>
+            </div>
+            <br>
+            <p>Phone:{{i.phone}}</p>
+            {%endfor%}
+            {%else%}
+            <div class="improfile">
+                <div class="over">
+                    <img height="120" class="rounded-circle hoverable " src="" alt="">
+                    <span id="user">{{user.username}}</span>
+                    <p style="padding:5px" class="alert alert-warning">Please update your profile for better experience
+                    </p>
+                    <br>
+                </div>
+            </div>
+            {%endif%}
+            <br>
+            <p>{{user.email}}</p>
+        </div>
+    </div>
+</div>

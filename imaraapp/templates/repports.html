@@ -1,0 +1,47 @@
+{% extends 'base_one.html' %}
+{% load bootstrap4 %}
+
+{% block content %}
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+
+
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-3">
+        </div>
+
+        <div class="col-md-6">
+
+
+            <table class="table table-bordered  shadow-lg p-3 mb-5 bg-white rounded">
+                <thead>
+                    <tr>
+                        <th scope="col">Script</th>
+                        <th scope="col">View</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+
+                        {% for project in projects %}
+                        <td>{{ project.name |title }}
+                        </td>
+                        <td><a style="color: #2bbbad;" href=" {% url 'stats' project.get_video_id %}">View Stats</a></td>
+                        {% endfor %}
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div class="col-md-3">
+        </div>
+    </div>
+</div>
+
+{% endblock %}

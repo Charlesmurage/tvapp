@@ -1,0 +1,53 @@
+{%extends 'base_one.html'%}
+{% load bootstrap4 %}
+{% load staticfiles %}
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Resource</title>
+
+  {% block styles %}
+  {% bootstrap_css %}
+  <link rel="stylesheet" href=""> {% endblock %}
+
+</head>
+<br>
+{% block content %}
+<br>
+<br>
+<br>
+
+
+  <div class="container">
+    <br>
+    <div class="row">
+      
+      <div class="col-md-3">
+      </div>
+      <br>
+      
+      <div class="col-md-6  shadow-lg p-3 mb-5 bg-white rounded">
+        <form action="{%url 'resource'%}" method="post" enctype="multipart/form-data">
+          {%csrf_token%}
+
+          {% bootstrap_form form%}
+          <input type="submit" class="btn btn-default" value="Post">
+        </form>
+      </div>
+
+      <div class="col-md-3"></div>
+    </div>
+  </div>
+
+</body>
+
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+<script type="text/javascript"
+  src="https://cdnjs.cloudflare.com/ajax/libs/jquery.nicescroll/3.7.6/jquery.nicescroll.min.js"></script>
+
+</html>
+{% endblock %}

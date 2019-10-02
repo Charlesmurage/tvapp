@@ -1,0 +1,44 @@
+{%extends "base_one.html"%} {% load bootstrap4 %}
+  {% block content %}
+  <div class="container">
+   
+  <!-- Card deck -->
+  <div class="container">
+      <div class="card-columns">
+
+
+    <!-- Card -->
+    {%for i in resources%}
+     <!-- Card -->
+<div class="card">
+
+    <!-- Card image -->
+    <div class="view overlay">
+      <img class="card-img-top" src="{{i.image.url}}" alt="Card image cap">
+      <a href="#!">
+        <div class="mask rgba-white-slight"></div>
+      </a>
+    </div>
+  
+    <!-- Card content -->
+    <div class="card-body">
+      <!-- Title -->
+      <h4 class="card-title">{{i.title}}</h4> 
+      <!-- Text -->
+      <p class="card-text">{{i.description}}</p>
+      
+      <!-- Button -->
+      <a href="{{i.url}}" class="btn btn-light-blue btn-md">Live Link</a>
+    </div>
+  
+  </div>
+ 
+  {%endfor%}
+</div>
+ 
+  <!-- Card -->
+ 
+
+  </div>
+  
+  {% endblock %}

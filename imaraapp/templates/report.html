@@ -1,0 +1,45 @@
+{% extends 'base_one.html' %}
+{% load bootstrap4 %}
+
+{% block content %}
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<div class="container">
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <div class="row">
+        <div class="col-md-3">
+        </div>
+
+        <div class="col-md-6">
+
+
+            <table class="table table-bordered  shadow-lg p-3 mb-5 bg-white rounded">
+                <thead>
+                    <tr>
+
+                        <th scope="col">View</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+
+                        <td>{{viewCount}}</td>
+
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="col-md-3">
+        </div>
+    </div>
+
+</div>
+
+
+{% endblock %}

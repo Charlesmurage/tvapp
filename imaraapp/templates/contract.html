@@ -1,0 +1,89 @@
+{% extends 'base_one.html' %}
+{% load bootstrap4 %}
+
+{% block content %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Groups</title>
+</head>
+
+<body class="has-navbar-fixed-top">
+  <nav class="navbar is-fixed-top box-shadow-y">
+    <div class="navbar-brand">
+      <a
+        role="button"
+        class="navbar-burger toggler"
+        aria-label="menu"
+        aria-expanded="false"
+      >
+      <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+        </a>
+        <a href="#" class="navbar-item has-text-weight-bold has-text-black">
+          Groups</br>
+          {{user.username}}
+        </a>
+        
+        <a
+          role="button"
+          class="navbar-burger nav-toggler"
+          aria-label="menu"
+          aria-expanded="false"
+        >
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+        </a>
+      </div>
+      <div class="navbar-menu has-background-white">
+        <div class="navbar-start">
+          <a href="{% url 'home' %}" class="navbar-item">
+            <i class="fas fa-home icon"></i> Home
+          </a>
+          <a href="{% url 'curriculum' %}" class="navbar-item">
+            Curriculum
+          </a>
+          <a href="#" class="navbar-item">
+            Discussions
+          </a>
+          <a href="{% url 'members' %}" class="navbar-item">People</a>
+        </div>
+        <div class="navbar-end">
+          <a href="#" class="navbar-item">
+            Collaborators
+          </a>
+          <div class="navbar-item has-dropdown is-hoverable">
+            <a href="#" class="navbar-link">
+              Admin
+            </a>
+            <div class="navbar-dropdown is-right">
+              <a href="" class="navbar-item">
+                Profile
+              </a>
+              <a href="#" class="navbar-item">Settings</a>
+              <hr class="navbar-divider" />
+              <a href="" a class="navbar-item">Log Out</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </nav>
+    <h2>It is a requirement that you go through the contract  before loging in to the system. Click on the link below to access the contract</br>
+        <a href="/static/js/cm.pdf">click here to view Contract</a>
+    </h2>
+
+</body>
+
+
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+<script type="text/javascript"
+    src="https://cdnjs.cloudflare.com/ajax/libs/jquery.nicescroll/3.7.6/jquery.nicescroll.min.js"></script>
+
+</html>
+{% endblock %}

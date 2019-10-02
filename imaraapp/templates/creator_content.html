@@ -1,0 +1,40 @@
+
+{%extends 'registration/regbase.html'%}
+{{block.super}}
+{%block content%}
+  <div class="container-fluid">
+        <div class="row">
+            {%for project in projects%}
+            <div class="col-md-4"> 
+              <div class="card content">
+                <div class="image">
+                    <a class="img" href="/project/{{project.id}}">  <img class="img-fluid" src="{{project.image.url}}" alt=""></a>
+                </div>
+                <div class="check">
+                  <i class="dta">{{project.date}}</i>
+                  <p>{{project.name}}</p>
+                 
+
+    
+                  <hr>
+                  <!-- <div class="">
+                    <i class="fas fa-pastafarianism"></i>
+                    <i class="far fa-star"></i>
+                  </div> -->
+                </div>
+                <div class="col-md-3">
+                  <a id='visit' class="btn btn-outline-default bg-default" href="{{project.link}}">Watch Video</a>
+                </div>
+    
+              </div>
+              <br>
+            </div>
+    
+            {%endfor%}
+    
+    
+          </div>
+  
+    </div>
+  
+{%endblock%}

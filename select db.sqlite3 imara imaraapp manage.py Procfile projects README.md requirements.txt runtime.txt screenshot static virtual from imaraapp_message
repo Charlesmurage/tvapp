@@ -1,0 +1,27 @@
+                     List of relations
+ Schema |              Name              | Type  |  Owner  
+--------+--------------------------------+-------+---------
+ public | auth_group                     | table | charles
+ public | auth_group_permissions         | table | charles
+ public | auth_permission                | table | charles
+ public | django_admin_log               | table | charles
+ public | django_content_type            | table | charles
+ public | django_migrations              | table | charles
+ public | django_session                 | table | charles
+ public | imaraapp_creator               | table | charles
+ public | imaraapp_creatorprofile        | table | charles
+ public | imaraapp_group                 | table | charles
+ public | imaraapp_members               | table | charles
+ public | imaraapp_message               | table | charles
+ public | imaraapp_profile               | table | charles
+ public | imaraapp_projects              | table | charles
+ public | imaraapp_resource              | table | charles
+ public | imaraapp_room                  | table | charles
+ public | imaraapp_script                | table | charles
+ public | imaraapp_sponsor               | table | charles
+ public | imaraapp_sponsorprofile        | table | charles
+ public | imaraapp_user                  | table | charles
+ public | imaraapp_user_groups           | table | charles
+ public | imaraapp_user_user_permissions | table | charles
+(22 rows)
+

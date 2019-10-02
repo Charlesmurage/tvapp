@@ -1,0 +1,57 @@
+{%extends 'ian_base.html'%}
+{%load bootstrap4%}
+{%load static%}
+{{block.super}}
+{%block content%}
+<!DOCTYPE html>
+<html lang="en">
+
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Welcome to my website</title>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.8.1/css/mdb.min.css" rel="stylesheet">
+  <!-- Material Design Bootstrap -->
+  
+</head>
+
+<body id="home">
+  <!--HOME START-->
+  <header>
+    <div class="overlay">
+      <div class="intro text-center">
+        <h1 class="bg-heading">Welcome to Imara</h1>
+        <h2 class="sm-heading"></h2>
+        
+      </div>
+    </div>
+  </header>
+  <!--HOME END-->
+  <!--NAVBAR START-->
+  <nav>
+    <div class="container">
+      <ul class="nav">
+        <li>
+          <a href="{%url 'new-person'%}">Apply now</a>
+        </li>
+        <li>
+          <a href="{%url 'new-overview'%}">Overview</a>
+        </li>
+        <li>
+          <a href="{%url 'new-curriculum'%}">Curriculum</a>
+        </li>
+        <li>
+          <a href="{%url 'new-testimonials'%}">Testimonials</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+  <!--NAVBAR END-->
+  
+</body>
+
+</html>
+{%endblock%}

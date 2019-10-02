@@ -1,0 +1,18 @@
+@media (min-width: 769px) {
+    .menu-container {
+      width: 25%;
+      min-width: auto;
+      transform: translateX(0%);
+    }
+  }
+  @media (min-width: 1024px) {
+    .menu-container {
+      width: 16.6667%;
+      min-width: auto;
+      transform: translateX(0%);
+    }
+  }
+
+  nav{
+      height:30%;
+  }

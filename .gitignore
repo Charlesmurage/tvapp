@@ -1,0 +1,14 @@
+virtual/
+*.pyc
+instance/
+__pycache__/
+.env
+.vscode/
+media/
+google-secret.json
+projects/
+resource/
+images/
+profile/
+
+
